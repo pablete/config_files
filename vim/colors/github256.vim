@@ -285,8 +285,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Todo", "999988", "", "underline")
 
 
-	call <SID>X("Cursor", "", "ffff33", "")
-	call <SID>X("CursorLine", "", "ffffcc", "none")
+	call <SID>X("Cursor", "", "000000", "")
+	call <SID>X("CursorLine", "", "eeeeee", "none")
 	call <SID>X("Directory", "4183c4", "", "")
 	call <SID>X("DiffAdd", "000000", "ddffdd", "")
 	call <SID>X("DiffDelete", "000000", "ffdddd", "")
