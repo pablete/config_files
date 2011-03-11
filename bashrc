@@ -1,4 +1,7 @@
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/apache2/bin:/usr/local/mysql/bin:$PATH
+#mysql & mongodb
+export PATH=/usr/local/mysql/bin:/opt/local/mongodb/bin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
 export EDITOR=vim
 export HISTSIZE=200
 export TERM=xterm-color
@@ -14,7 +17,6 @@ alias ll='ls -lastr '
 tag() { alias $1="cd $PWD"; }
 ptag() { alias $1="cd $PWD"; echo "alias $1=\"cd $PWD\"" >> ~/.bash_aliases; }
 finder() { PWD=`pwd`; open -a /System/Library/CoreServices/Finder.app "$PWD"; }
-gitwork() { echo "Adding pablo.delgado@xing.com as a commiter"; git config user.name "Pablo Delgado"; git config user.mail "pablo.delgado@xing.com"; }
 
 #for memcache
 EVENT_NOKQUEUE=1
@@ -24,12 +26,11 @@ export HISTCONTROL=erasedups
 export HISTSIZE=10000
 shopt -s histappend
 
-# pwd as iTerm window name
-alias xe='eval `bin/xing_env`; export XE=[xe]'
-export PROMPT_COMMAND='echo -ne "\033]0;$XE ${PWD/#$HOME/~}\007"'
-
-#Use Stefan Kaes Ruby
-export PATH=/usr/local/ruby187pl202patched/bin:$PATH
+#added Android SDK
+export PATH=/opt/local/android/tools:$PATH
 
 # rvm
-if [[ -s /Users/pablo.delgado/.rvm/scripts/rvm ]] ; then source /Users/pablo.delgado/.rvm/scripts/rvm ; fi
+if [[ -s /Users/pdelgado/.rvm/scripts/rvm ]] ; then source /Users/pdelgado/.rvm/scripts/rvm ; fi
+
+# nvm
+if [[ -s /Users/pdelgado/.nvm/nvm.sh ]] ; then source /Users/pdelgado/.nvm/nvm.sh ; fi
